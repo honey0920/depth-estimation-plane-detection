@@ -50,3 +50,4 @@ My implementation is based on the projects:
 
 ## Acknowledgements
 This implementation has been tested with python2.7 and Ubuntu 16.04.
+My core code to process pictures are in homework/depth.py and homework/plane.py with comments.
