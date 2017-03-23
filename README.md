@@ -3,7 +3,7 @@ Course assignment for Image Analysis and Understanding 2017
 
 A python implementation of depth estimation&plane detection described in the papers:
 * [Accurate 3D ground plane estimation from a single image(ICRA 2009)](http://www-users.cs.umn.edu/~cherian/papers/3dpaperICRA09.pdf) 
-* [Depth Map Prediction from a Single Image using a Multi-Scale Deep Network.(Nips 2014)](hhttp://www.cs.nyu.edu/~deigen/depth/depth_nips14.pdf)
+* [Depth Map Prediction from a Single Image using a Multi-Scale Deep Network.(Nips 2014)](http://www.cs.nyu.edu/~deigen/depth/depth_nips14.pdf)
 
 the depth-estimation algorithm use CNN in the second paper and the plane detection algorithm  is in the first paper
 
@@ -41,10 +41,10 @@ My implementation is based on the projects:
 
 ## Links
 
-####http://itec.hust.edu.cn/~chenghn/project/Depth_Estimation/index.html
+#### http://itec.hust.edu.cn/~chenghn/project/Depth_Estimation/index.html
 * It is our project website.
 
-####http://lbmedia.ece.ucsb.edu/member/uweb/Teaching/website/index.htm
+#### http://lbmedia.ece.ucsb.edu/member/uweb/Teaching/website/index.htm
 * Spring 2017: Image Analysis and Understanding(Our course website)
 
 
