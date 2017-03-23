@@ -15,7 +15,7 @@ the depth-estimation algorithm use CNN in the second paper and the plane detecti
 3. Pretrained caffe model : [model_norm_abs_100k.caffemodel](https://dl.dropboxusercontent.com/u/65091385/model_norm_abs_100k.caffemodel)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Please download the file from link above.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Save the caffemodel file under `model`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Save the caffemodel file under `/model`
 
 ### Running
 ```
