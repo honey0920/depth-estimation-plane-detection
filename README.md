@@ -27,7 +27,7 @@ python manage.py runserver
 <p align="center">
 <img src="media/img.png" height="192px">
 <img src="media/depth.png" height="192px">
-
+<br>
 <img src="media/avg_color.png" height="192px">
 <img src="media/box.png" height="192px">
 </p>
