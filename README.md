@@ -32,20 +32,6 @@ python manage.py runserver
 <img src="media/box.png" height="192px">
 </p>
 
-### The Gyeongbokgung Palace in Seoul, South Korea
-Results were obtained from default setting except `--max_size 1200`.  
-An image was rendered approximately after 19.5 mins on  GTX 980 ti.
-
-<p align="center">
-<img src="images/gyeongbokgung.jpg" height="172px">
-<img src="samples/gyeongbokgung_shipwreck.jpg" height="172px">
-<img src="samples/gyeongbokgung_starry-night.jpg" height="172px">
-
-<img src="samples/gyeongbokgung_seated-nude.jpg" height="172px">
-<img src="samples/gyeongbokgung_the_scream.jpg" height="172px">
-<img src="samples/gyeongbokgung_kandinsky.jpg" height="172px">
-</p>
-
 ## References
 
 My implementation is based on the projects:
@@ -53,10 +39,10 @@ My implementation is based on the projects:
 #### https://github.com/janivanecky/Depth-Estimation  
 * This is a implemention of depth-estimation using CNN, I use the pretrained caffe model in that project. 
 
-##  Links
+## Links
 
 ####http://itec.hust.edu.cn/~chenghn/project/Depth_Estimation/index.html
-*It is our project website.
+* It is our project website.
 
 ####http://lbmedia.ece.ucsb.edu/member/uweb/Teaching/website/index.htm
 * Spring 2017: Image Analysis and Understanding(Our course website)
