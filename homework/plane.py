@@ -11,7 +11,7 @@ import sys
 import copy
 from PIL import ImageFile  
 ImageFile.LOAD_TRUNCATED_IMAGES = True  
-DIR = '/home/hanni/test_django/media/'
+DIR = 'media/'
 #get the top-left and thr bottom-right point of an area,the two functions below will be used
 #in display_box to draw the bounding box.
 def get_tl(pts):

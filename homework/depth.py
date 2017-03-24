@@ -17,7 +17,7 @@ OUT_WIDTH = 74
 OUT_HEIGHT = 54
 GT_WIDTH = 420
 GT_HEIGHT = 320
-DIR = '/home/hanni/test_django/media/'
+DIR = 'media/'
 
 def testNet(net, img):	
 	net.blobs['X'].data[...] = img	
