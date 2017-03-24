@@ -24,6 +24,12 @@ python manage.py runserver
 
 ## Sample results
 
+* The following figure shows the screenshot of our demo website.
+<p align="center"> 
+	<img src="media/website.png" height="320px">
+</p>
+
+* These are the depth estimation and plane detection figure.
 <p align="center">
 <img src="media/img.png" height="192px">
 <img src="media/depth.png" height="192px">
