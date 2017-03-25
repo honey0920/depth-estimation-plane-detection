@@ -116,7 +116,7 @@ def is_coplanar(sample1, sample2):
     mag1 = np.sqrt(vec1.dot(vec1))
     mag2 = np.sqrt(vec2.dot(vec2))
     cosine = (vec1.dot(vec2))/(mag1 * mag2)
-    if np.fabs(cosine)> 0.97:
+    if np.fabs(cosine)> 0.95:
         return True
     else:
         return False
@@ -161,16 +161,32 @@ def display_avg_plane(image,plane_clusters):
     cv2.imwrite(DIR+'avg_color.png',new_image)
 
 def display_box(image,plane_clusters):
+    boxes = []
     new_image = copy.copy(image)
     for i in range(len(plane_clusters)):
-        if(len(plane_clusters[i])>2500):
-            cv2.rectangle(new_image,get_tl(plane_clusters[i]),get_br(plane_clusters[i]),(0,0,255),1)
+        if(len(plane_clusters[i])>3000):
+           # cv2.rectangle(new_image,get_tl(plane_clusters[i]),get_br(plane_clusters[i]),(0,0,255),1)
+            boxes.append([get_tl(plane_clusters[i]),get_br(plane_clusters[i])])
+        for rec in boxes:
+            for other_rec in boxes:
+                if(rec!=other_rec):
+                    if(rec[0][0]<other_rec[1][0] and rec[0][1] < other_rec[1][1]):
+                        s1 = (other_rec[1][0] - rec[0][0])*( other_rec[1][1] - rec[0][1])
+                        s2 = (rec[1][0] - rec[0][0]) * (rec[1][1] - rec[0][1])
+                        s3 = (other_rec[1][0] -other_rec[0][0]) * (other_rec[1][1] - other_rec[0][1])
+                        if(s1>0.7 * min(s2,s3)):
+                            if (s2>s3):
+                                boxes.remove(other_rec)
+                            else:
+                                boxes.remove(rec)
+        for r in boxes:
+            cv2.rectangle(new_image,r[0],r[1],(0,0,255,1))
     cv2.imwrite(DIR+'box.png',new_image)
 
 def get_planar(image_path,depth_path): 
 	image = cv2.imread(image_path)
 	depth = cv2.imread(depth_path,0)   
-	clusters = slic(image,600,3,10,convert2lab=True)
+	clusters = slic(image,1000,3,10,convert2lab=True)
 	contours = find_boundaries(clusters)
 	idx_clusters = get_clusters(clusters)
 	seg_num = np.amax(clusters)+1
@@ -179,7 +195,7 @@ def get_planar(image_path,depth_path):
 	visited = []
 	root = []
 	qNode=[]
-	sample_num = 30
+	sample_num = 50
 	for i in range(seg_num):
 		visited.append(False)
 		root.append(i)
